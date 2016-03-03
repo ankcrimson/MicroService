@@ -1,5 +1,5 @@
 FORMAT: 1A
-HOST: http://polls.apiblueprint.org/
+HOST: http://localhost:8080/
 
 # MicroService
 
@@ -11,7 +11,7 @@ A token creation and retrival MicroService
 
 + Response 200 (application/json)
 
-        [
+        
             {
                 "version": "v1",
                 "tokens": [
@@ -30,7 +30,7 @@ A token creation and retrival MicroService
                     }
                 ]
             }
-        ]
+        
 
 ## Tokens Creation [/createToken]
 
@@ -63,11 +63,10 @@ Create new token based on the json request.
 
 + Response 200 (application/json)
 
-        [
             {
                 "name" : "MicroService",
                 "version" : "v1"
                 
             }
-        ]
+        
 
