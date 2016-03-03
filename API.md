@@ -5,7 +5,7 @@ HOST: http://polls.apiblueprint.org/
 
 A token creation and retrival MicroService
 
-## Questions Collection [/questions]
+## Tokens Creation [/tokens]
 
 ### List All Tokens [GET]
 
