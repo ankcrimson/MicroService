@@ -5,7 +5,7 @@ HOST: http://polls.apiblueprint.org/
 
 A token creation and retrival MicroService
 
-## Tokens Creation [/tokens]
+## Tokens Listing [/tokens]
 
 ### List All Tokens [GET]
 
@@ -32,6 +32,8 @@ A token creation and retrival MicroService
             }
         ]
 
+## Tokens Creation [/createToken]
+
 ### Create a New Token [POST]
 
 Create new token based on the json request.
@@ -54,3 +56,18 @@ Create new token based on the json request.
                 "creation": "success",
                 "hash":"hashed value"
             }
+
+## About Service [/about]
+
+### About Service [GET]
+
++ Response 200 (application/json)
+
+        [
+            {
+                "name" : "MicroService",
+                "version" : "v1"
+                
+            }
+        ]
+
