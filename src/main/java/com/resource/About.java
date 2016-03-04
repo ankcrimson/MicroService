@@ -5,6 +5,7 @@ import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.GenericEntity;
+import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import java.util.Map;
 import java.util.HashMap;
@@ -18,13 +19,13 @@ import java.util.HashMap;
 public class About {
 
     @GET
-    @Produces("application/json")
+    @Produces(MediaType.APPLICATION_JSON)
     public Response about() {
-        Map<String,Object> aboutResponse = new HashMap<>();
+        Map<String,String> aboutResponse = new HashMap<>();
         aboutResponse.put("name","MicroService");
         aboutResponse.put("version","v1");
-        GenericEntity<Map<String , Object>> entity = new GenericEntity<Map<String,Object>>(aboutResponse){};
-        return Response.ok(entity).build();
+        //GenericEntity<Map<String , String>> entity = new GenericEntity<Map<String,String>>(aboutResponse){};
+        return Response.ok(aboutResponse).build();
     }
 
 }
