@@ -1,4 +1,4 @@
-package com.models;
+package com.dto;
 
 /**
  * Created by asriv5 on 3/3/16.

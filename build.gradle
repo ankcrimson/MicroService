@@ -32,10 +32,13 @@ dependencies {
     compile 'org.glassfish.jersey.containers:jersey-container-servlet-core:2.22.2'
     compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.22.2'
     compile 'org.glassfish.jersey.core:jersey-server:2.22.2'
-    compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.22.2'
-    compile 'com.netflix.hystrix:hystrix-core:1.5.0'
-
-
+    compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.22.2' //json response
+    compile 'com.netflix.hystrix:hystrix-core:1.5.0' //fault tolerance
+    compile 'com.couchbase.client:java-client:2.2.5' //db
+    compile 'com.google.inject:guice:4.0' //dependency injectiion
+    compile 'com.netflix.governator:governator:1.12.10' // for bootstrapping and guice support
+    compile 'com.google.inject.extensions:guice-servlet:4.0'
+compile 'javax.servlet:servlet-api:2.5'
 
 
     // Declare the dependency for your favourite test framework you want to use in your tests.
@@ -43,6 +46,7 @@ dependencies {
     // testCompile dependency to testCompile 'org.testng:testng:6.8.1' and add
     // 'test.useTestNG()' to your build script.
     testCompile 'junit:junit:4.12'
+    testCompile 'com.carlosbecker:guice-junit-test-runner:1.1'
 }
 
 apply plugin: 'jetty'
