@@ -41,7 +41,8 @@ Create new token based on the json request.
 + Request (application/json)
 
         {
-            "user": "Timon"
+            "user": "Timon",
+            "uuid": "123"
         }
 
 + Response 201 (application/json)
@@ -54,7 +55,7 @@ Create new token based on the json request.
 
             {
                 "creation": "success",
-                "hash":"hashed value"
+                "message":"accepted"
             }
 
 ## About Service [/about]

@@ -15,20 +15,6 @@ repositories {
 // Apply the java plugin to add support for Java
 apply plugin: 'java'
 
-/*
-//Using the default
-sourceSets {
-    main {
-        java {
-            srcDir 'src/main/java'
-        }
-        resources {
-            srcDir 'src/main/resources'
-        }
-    }
-}
-*/
-
 
 // In this section you declare where to find the dependencies of your project
 repositories {
@@ -47,7 +33,7 @@ dependencies {
     compile 'org.glassfish.jersey.containers:jersey-container-servlet:2.22.2'
     compile 'org.glassfish.jersey.core:jersey-server:2.22.2'
     compile 'org.glassfish.jersey.media:jersey-media-json-jackson:2.22.2'
-
+    compile 'com.netflix.hystrix:hystrix-core:1.5.0'
 
 
 
