@@ -4,7 +4,7 @@
  * Date: 3/3/16
  * Time: 7:50 PM
  */
-package com.modules;
+package com.testModules;
 
 import com.google.inject.AbstractModule;
 import com.models.CouchbaseDatasource;

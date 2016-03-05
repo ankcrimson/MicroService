@@ -4,10 +4,8 @@ import com.carlosbecker.guice.GuiceModules;
 import com.carlosbecker.guice.GuiceTestRunner;
 import com.dto.TokenRequestDTO;
 import com.google.inject.Inject;
-import com.modules.DatabaseModule;
+import com.testModules.DatabaseModule;
 import junit.framework.Assert;
-import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 

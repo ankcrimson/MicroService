@@ -5,7 +5,7 @@ import com.carlosbecker.guice.GuiceTestRunner;
 import com.dto.TokenRequestDTO;
 import com.dto.TokenResponseDTO;
 import com.google.inject.Inject;
-import com.modules.DatabaseModule;
+import com.testModules.DatabaseModule;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
