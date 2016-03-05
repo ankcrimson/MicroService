@@ -14,10 +14,11 @@ import org.glassfish.hk2.utilities.binding.AbstractBinder;
 @Singleton
 public class ApplicationBinder extends AbstractBinder {
 
+
     @Override
     protected void configure() {
         bind(DatabaseService.class).to(DatabaseService.class);
-        bind(DataSource.class).to(CouchbaseDatasource.class);
+        bind(CouchbaseDatasource.class).to(DataSource.class);
         System.out.println("HK2 Bindings Created!!");
     }
 

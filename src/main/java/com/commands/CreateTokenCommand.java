@@ -2,6 +2,8 @@ package com.commands;
 
 import com.dto.TokenRequestDTO;
 
+import com.dto.TokenResponseDTO;
+import com.models.CouchbaseDatasource;
 import com.netflix.hystrix.HystrixCommand;
 import com.netflix.hystrix.HystrixCommandGroupKey;
 import com.services.DatabaseService;
@@ -13,27 +15,29 @@ import javax.inject.Inject;
  */
 public class CreateTokenCommand extends HystrixCommand<String> {
 
-    private TokenRequestDTO tokenRequestDTO;
-
-    @Inject
     private DatabaseService service;
 
-    public CreateTokenCommand(TokenRequestDTO tokenRequestDTO) {
+    private TokenRequestDTO tokenRequestDTO;
+
+    public CreateTokenCommand(TokenRequestDTO tokenRequestDTO, DatabaseService service) {
         super(HystrixCommandGroupKey.Factory.asKey("microserviceCommands"));
         this.tokenRequestDTO = tokenRequestDTO;
+        this.service = service;
     }
 
     @Override
     protected String run() throws Exception {
         System.out.println("Hystrix Command Run");
+
         service.createToken(tokenRequestDTO);
+
         return "Token Command Submitted";
     }
 
     @Override
     protected String getFallback() {
         System.out.println("Hystrix Command Fallback - "+getExecutionException().getMessage());
-        getExecutionException().printStackTrace();
+        //getExecutionException().printStackTrace();
         return "Create Token Failed";
     }
 }

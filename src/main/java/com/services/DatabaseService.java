@@ -2,9 +2,10 @@ package com.services;
 
 import com.dto.TokenRequestDTO;
 import com.dto.TokenResponseDTO;
-import com.google.inject.Inject;
-import com.google.inject.Singleton;
 import com.models.DataSource;
+
+import javax.inject.Inject;
+import javax.inject.Singleton;
 
 /**
  * Created by asriv5 on 3/3/16.

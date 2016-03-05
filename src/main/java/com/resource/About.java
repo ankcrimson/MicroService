@@ -1,5 +1,8 @@
 package com.resource;
 
+import com.services.DatabaseService;
+
+import javax.inject.Inject;
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
@@ -14,6 +17,8 @@ import java.util.HashMap;
  */
 @Path("/about")
 public class About {
+
+
 
     @GET
     @Produces(MediaType.APPLICATION_JSON)
