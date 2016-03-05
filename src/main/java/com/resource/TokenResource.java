@@ -3,10 +3,7 @@ package com.resource;
 import com.commands.CreateTokenCommand;
 import com.dto.TokenRequestDTO;
 import com.dto.TokenResponseDTO;
-
-import com.models.DataSource;
 import com.services.DatabaseService;
-
 import javax.inject.Inject;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.POST;
@@ -37,9 +34,6 @@ public class TokenResource {
         TokenResponseDTO responseDTO = new TokenResponseDTO();
         responseDTO.setCreation("Success");
         responseDTO.setMessage("Submitted");
-        try {
-            System.out.println(commandFuture.get());
-        }catch (InterruptedException|ExecutionException ie) {ie.printStackTrace();}
         return Response.ok(responseDTO).build();
     }
 }
