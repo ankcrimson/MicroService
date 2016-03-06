@@ -6,6 +6,7 @@ import com.models.DataSource;
 
 import javax.inject.Inject;
 import javax.inject.Singleton;
+import java.util.List;
 
 /**
  * Created by asriv5 on 3/3/16.
@@ -34,5 +35,11 @@ public class DatabaseService {
         }
 
         return responseDTO;
+    }
+
+
+    public List<TokenRequestDTO> listAllTokens() {
+        System.out.println("Database service called");
+        return dataSource.listAllTokens();
     }
 }

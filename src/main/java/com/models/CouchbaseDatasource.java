@@ -1,13 +1,14 @@
 package com.models;
 
-import com.couchbase.client.deps.com.fasterxml.jackson.databind.util.JSONPObject;
 import com.couchbase.client.java.Bucket;
 import com.couchbase.client.java.Cluster;
 import com.couchbase.client.java.CouchbaseCluster;
-import com.couchbase.client.java.document.Document;
 import com.couchbase.client.java.document.JsonDocument;
 import com.couchbase.client.java.document.json.JsonObject;
 import com.dto.TokenRequestDTO;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by ankcrimson on 3/3/16.
@@ -40,6 +41,20 @@ public class CouchbaseDatasource implements DataSource {
     }
 
 
+    @Override
+    public List<TokenRequestDTO> listAllTokens() {
+        //TODO: to implement this function
+        TokenRequestDTO t1 = new TokenRequestDTO();
+        TokenRequestDTO t2 = new TokenRequestDTO();
+        t1.setUser("User 1");
+        t1.setUuid("id1");
+        t2.setUser("User 2");
+        t2.setUuid("id2");
+        List<TokenRequestDTO> result = new ArrayList<>();
+        result.add(t1);
+        result.add(t2);
+        return result;
+    }
 
     @Override
     public void init() {
